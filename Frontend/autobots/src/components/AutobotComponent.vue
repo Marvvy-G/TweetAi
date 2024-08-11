@@ -23,12 +23,11 @@ export default {
     };
   },
   mounted() {
-    // Establish the Socket.IO connection
-    this.socket = io('http://localhost:3000'); // Replace with your Socket.IO server URL
+    this.socket = io('http://localhost:3000'); 
 
     this.socket.on('connect', () => {
       console.log('Socket connected');
-      this.socket.emit('getAutobotCount'); // Request the initial count
+      this.socket.emit('getAutobotCount');
     });
 
     this.socket.on('autobotCount', (data) => {
@@ -49,7 +48,7 @@ export default {
   },
   beforeUnmount() {
     if (this.socket) {
-      this.socket.disconnect(); // Clean up the socket connection when the component is destroyed
+      this.socket.disconnect(); 
     }
   }
 };
