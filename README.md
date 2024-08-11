@@ -51,4 +51,5 @@ DB_PASSWORD=your_database_password
 DB_HOST=localhost
 
 4. Start the Application
-   npm start
+5. ``bash
+   npm run dev
